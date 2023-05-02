@@ -1,0 +1,279 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#header{
+z-index: 1;  
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+width: 100%;
+height: 50px;
+background-color: #ffff;
+}
+#nav > li{
+    font-size: 13px;
+    display: inline-block;
+}
+#nav li{
+   
+   position: relative;
+}
+#nav > li > a{
+text-transform: uppercase;
+   color:rgb(107, 105, 105);
+}
+#nav li a{
+   display:    block;
+   text-decoration: none;
+   line-height: 50px;
+   padding: 0 24px 0 24px;
+   /* font-family: ; */
+}
+#nav > li:hover > a{
+color: black;
+border-radius: 10px;
+   background-color: #cae0e1;
+
+}
+#nav{
+    float:right;
+    display: inline-block;
+}
+
+#background-image{
+    filter: blur(6px);
+}
+#banner{
+
+height: 800px;
+width: 100%;
+position: relative;
+}
+.backgroundimg{
+position: absolute;
+background-image: url("img/daihocdanang.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+opacity: 0.65;
+height: 800px;
+width: 100%;
+}
+.icons{
+position: absolute;
+top: 250px;    
+animation: iconsrotate 5s normal;
+display: grid;
+grid-template-columns: auto auto auto auto auto;
+}
+.biglogo{
+    position: absolute;
+    top: 70px;
+    left: 30px;
+}
+.biglogoicon{
+    height: 140px;
+    width: 140px;
+}
+.icondh{
+    background-color: white;
+    border-radius: 50%;
+    margin: 30px;
+    height: 70px;
+    width: 70px;
+}
+
+.title{
+    top: 10%;
+    right: 15%;
+    position: absolute;
+    font-size: 3rem;
+    animation: titlein 4s infinite;
+    
+}
+.comment{
+    font-size: 50px;
+
+}
+.hrnew{
+    position: absolute;
+    right: 15%;
+    top: 60%;
+}
+.introinfor{
+    position: absolute;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    top: 62%;
+    right: 11%;
+    color: #000000;
+}
+
+#slide{
+background-color:#ffff;
+padding: 100px 0 100px 0;
+width: 100%;
+height: 800px;
+position: relative;
+}
+.slideimg{
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    background-image: url("img/daihocviethan.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.buttonslide{
+    font-size: 50px;
+    top: 45%;
+    color: #ffff;
+}
+.pre{
+    position: absolute;
+    left: 15px;
+}
+.next{
+    position: absolute;
+    right: 15px;
+
+}
+#advantage{
+background-color: #ABA08F;
+width: 100%;
+height: 800px;
+position: relative;
+}
+.theh1{
+    position: absolute;
+    color: #ffff;
+    font-family: 'Courier New', Courier, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: double;
+    top: 10%;
+    left: 10%;
+}
+.contentinadvantage{
+    position: absolute;
+    color: white;
+    top: 30%;
+    left: 10%;
+}
+.blockinright{
+    position: absolute;
+    width: 40%;
+    height: 700px;
+    background-color: #466A8B;
+    right: 30px;
+}
+.listadvantage{
+    margin-top: 50px;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 300;
+}
+#information{
+    margin-top: 1px;
+background-color: #8B949D;
+width: 100%;
+height: 800px;
+position: relative;
+}
+#feedback{
+    background-color: #ffff;
+width: 100%;
+height: 800px;
+position: relative;
+}
+.feedbacktitle{
+    position: absolute;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    left: 40%;
+    margin-top: 30px; 
+    font-size: 60px;
+}
+.feedbacktitles{
+    position: absolute;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    left: 35%;
+    margin-top: 30px; 
+    font-size: 60px;
+}
+.personfeedback{
+    display: flex;
+    position: absolute;
+    top: 20%;
+    width: 100%;
+}
+.feedbackblock{
+    position: relative;
+height: 500px;
+width: 250px;
+align-items: center;
+text-align: center;
+margin: 120px;
+}
+.feedbackblocks{
+    position: relative;
+height: 500px;
+width: 250px;
+align-items: center;
+text-align: center;
+margin: 60px;
+}
+.imgclient{
+    height: 300px;
+    width: 250px;
+}
+#introduction{
+    background-color: #EDE2D7;
+width: 100%;
+height: 846px;
+position: relative;
+}
+#footer{
+    background-color: #8B949D;
+width: 100%;
+height: 846px;
+position: relative;
+}
+.contacttittle{
+    position: absolute;
+    color: #ffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    top: 20%;
+    left: 5%;
+}
+@keyframes titlein
+{
+    from{
+        opacity: 0;
+        right: 20%;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    to{
+        right: 10%;
+        opacity: 1;
+    }
+}
+
+@keyframes iconsrotate {
+    from{
+        opacity: -1;
+        transform: translateY(-100px);
+    }
+    to{
+        opacity: 1.2;
+        transform: translateX(0);
+       
+    }
+}
