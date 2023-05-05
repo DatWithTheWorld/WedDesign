@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -53,7 +53,7 @@ border-radius: 10px;
 }
 #banner{
 
-height: 800px;
+height: 820px;
 width: 100%;
 position: relative;
 }
@@ -63,7 +63,7 @@ background-image: url("img/daihocdanang.jpg");
 background-repeat: no-repeat;
 background-size: cover;
 opacity: 0.65;
-height: 800px;
+height: 820px;
 width: 100%;
 }
 .icons{
@@ -121,7 +121,7 @@ grid-template-columns: auto auto auto auto auto;
 background-color:#ffff;
 padding: 100px 0 100px 0;
 width: 100%;
-height: 800px;
+height: 820px;
 position: relative;
 }
 .slideimg{
@@ -149,7 +149,7 @@ position: relative;
 #advantage{
 background-color: #ABA08F;
 width: 100%;
-height: 800px;
+height: 820px;
 position: relative;
 }
 .theh1{
@@ -164,7 +164,7 @@ position: relative;
     position: absolute;
     color: white;
     top: 30%;
-    left: 10%;
+    left: 9%;
 }
 .blockinright{
     position: absolute;
@@ -183,13 +183,14 @@ position: relative;
     margin-top: 1px;
 background-color: #8B949D;
 width: 100%;
-height: 800px;
+height: 820px;
 position: relative;
 }
 #feedback{
     background-color: #ffff;
+    padding-top: 30px;
 width: 100%;
-height: 800px;
+height: 820px;
 position: relative;
 }
 .feedbacktitle{
@@ -218,7 +219,7 @@ height: 500px;
 width: 250px;
 align-items: center;
 text-align: center;
-margin: 120px;
+margin: 100px;
 }
 .feedbackblocks{
     position: relative;
@@ -226,7 +227,7 @@ height: 500px;
 width: 250px;
 align-items: center;
 text-align: center;
-margin: 60px;
+margin: 45px;
 }
 .imgclient{
     height: 300px;
@@ -234,6 +235,7 @@ margin: 60px;
 }
 #introduction{
     background-color: #EDE2D7;
+    padding-top: 20px;
 width: 100%;
 height: 846px;
 position: relative;
@@ -251,6 +253,30 @@ position: relative;
     top: 20%;
     left: 5%;
 }
+.js-scroll {
+    opacity: 0;
+    transition: opacity 500ms;
+  }
+  
+  .js-scroll.scrolled {
+    opacity: 1;
+  }
+  
+  .scrolled.fade-in {
+    animation: fade-in 1s ease-in-out both;
+  }
+  
+  .scrolled.fade-in-bottom {
+    animation: fade-in-bottom 1s ease-in-out both;
+  }
+  
+  .scrolled.slide-left {
+    animation: slide-in-left 1s ease-in-out both;
+  }
+  
+  .scrolled.slide-right {
+    animation: slide-in-right 1s ease-in-out both;
+  }
 @keyframes titlein
 {
     from{
@@ -277,3 +303,51 @@ position: relative;
        
     }
 }
+
+@keyframes slide-in-left {
+    0% {
+      -webkit-transform: translateX(-100px);
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slide-in-right {
+    0% {
+      -webkit-transform: translateX(100px);
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade-in-bottom {
+    0% {
+      -webkit-transform: translateY(50px);
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
