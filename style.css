@@ -125,13 +125,30 @@ height: 820px;
 position: relative;
 }
 .slideimg{
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 600px;
     background-image: url("img/daihocviethan.jpg");
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     background-size: cover;
+    background-position: right;
+    /* animation: slidenext 4s normal; */
 }
+/* .slideimg.active {
+    animation: slide 4s infinite;
+  }
+  
+  @keyframes slide {
+    0% {
+        transform: translateX(100%);
+      }
+      50%{
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+  } */
 .buttonslide{
     font-size: 50px;
     top: 45%;
