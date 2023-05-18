@@ -35,27 +35,46 @@ bner.forEach(img =>{
 })
 const slidesh = document.querySelector(".slideimg")
 let count = 0;
-function setbackground(){
-slidesh.style.backgroundImage= `url(${bner[count].alt})`
-    count++
-    
-    if(count===10){
-        count=0
-    }
-    slidesh.style.animation = 'slidenext 4s normal'
-    console.log(`url(${bner[count].alt})`)
-}
-setInterval(setbackground,2000)
+
 const styleSheet = new CSSStyleSheet(); 
 const rotateRule = `@keyframes slidenext {
     from {
-      transform: translateX(-100%);
+      transform: translateX(200%);
     }
     to {
       transform:translateX(0);
     }
   }`;
   styleSheet.insertRule(rotateRule);
+  document.adoptedStyleSheets = [styleSheet]
+  let isam = false
+  function setbackground(){
+slidesh.style.backgroundImage= `url(${bner[count].alt})`
+    count++
+    isam = true
+    if(count===bner.length){
+        count=0
+    }
+  
+    console.log(`url(${bner[count].alt})`)
+}
+
+let checkcr = true;
+let intervalid;
+function getcr(){ slidesh.addEventListener("mouseenter", e=>{
+    
+  checkcr = false;
+  clearInterval(intervalid)
+})
+}
+function getcrout(){ slidesh.addEventListener("mouseleave", e=>{
+
+  checkcr = true; intervalid = setInterval(setbackground,3000);
+})
+}
+intervalid = setInterval(setbackground,3000);
+getcr();
+getcrout();
   const scrollElements = document.querySelectorAll(".js-scroll");
 
   const elementInView = (el, dividend = 1) => {
