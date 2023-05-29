@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <style>
+          /* Header styles */
+          .header {
+            background-color: rgb(60, 59, 59);
+            height: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px;
+            border-bottom: 1px solid #ddd;
+          }
+    
+       
+          .header .menu {
+            display: flex;
+            align-items: center;
+          }
+    
+          .header .menu li {
+            list-style: none;
+            margin-left: 20px;
+          }
+    
+          .header .menu a {
+            color: #f6f0f0;
+            text-decoration: none;
+            font-size: 14px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          }
+    
+          .header .menu a:hover {
+            color: #f00;
+          }
+          .quocky{
+            cursor: pointer;
+          }
+    </style>
+    
+
+    <style>/* adds some margin below the link sets  */
+    .navbar .dropdown-menu div[class*="col"] {
+       margin-bottom:1rem;
+    }
+    
+    .navbar .dropdown-menu {
+      border:none;
+      background-color:#16467a!important;
+      
+    }
+    
+    .navbar {
+        
+    position: sticky;
+    top: 0;
+   z-index: 999; /* đảm bảo navbar sẽ nằm trên các thành phần khác của trang web */
+}
+
+    /* breakpoint and up - mega dropdown styles */
+    @media screen and (min-width: 992px) {
+      
+      /* remove the padding from the navbar so the dropdown hover state is not broken */
+    .navbar {
+      background: rgb(12, 104, 203);
+      padding-top:0px;
+      padding-bottom:0px;
+    }
+    
+    /* remove the padding from the nav-item and add some margin to give some breathing room on hovers */
+    .navbar .nav-item {
+      padding:.5rem .5rem;
+      margin:0 .25rem;
+  
+    }
+    
+    /* makes the dropdown full width  */
+    .navbar .dropdown {position:static;}
+    
+    .navbar .dropdown-menu {
+        
+      width:100%;
+      left:0;
+      right:0;
+    /*  height of nav-item  */
+      top:88px;
+      display:block;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s, opacity 0.3s linear;
+      
+    }
+      
+   
+    
+      
+      /* shows the dropdown menu on hover */
+    .navbar .dropdown:hover .dropdown-menu, .navbar .dropdown .dropdown-menu:hover {
+      display:block;
+      visibility: visible;
+      opacity: 1;
+      transition: visibility 0s, opacity 0.3s linear;
+    }
+      
+      .navbar .dropdown-menu {
+        border: 1px solid rgba(0,0,0,.15);
+        background-color: #fff;
+        
+      }
+    
+    }
+    
+      
+    </style>
+
+<!-- texteffect-->
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100');
+
+.texteffect {
+  font-family: 'Roboto Bold';
+  background: #d46626;
+  height: 100%;
+}
+
+
+.texteffect,
+.texteffect > .text {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  font-weight: 100;
+  font-size: 28px;
+  color: #FAFAFA;
+}
+
+.dud {
+  color: #757575;
+}
+
+</style>
+
+
+<!-- client-->
+<style>
+  /* Nhập font chữ từ Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+/* Áp dụng font chữ và màu nền cho trang web */
+.client {
+  font-family: 'PT Sans', Arial, Verdana;
+  background-color: #eee;
+}
+
+/* Thiết lập kích thước cho hình ảnh */
+.clientxs {
+  display: inline-block;
+  width: 200px;
+  height: 100px;
+}
+
+/* Thiết lập kích thước và hiệu ứng cho khung client */
+.client {
+  width: 1330px;
+  height: 120px;
+  overflow: hidden;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 2px solid #999;
+  box-shadow: 0 0 4px #000;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+/* Thiết lập hiệu ứng chạy carousel cho hình ảnh */
+.clients {
+  animation: carousel 25s linear infinite;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+/* Dừng hiệu ứng carousel khi người dùng di chuột qua nó */
+.clients:hover {
+  animation-play-state: paused;
+}
+
+/* Thiết lập keyframe cho hiệu ứng carousel */
+@keyframes carousel {
+  0% {
+    transform: translateX(0);
+  }
+  
+  50% {
+    transform: translateX(-100%);
+  }
+  
+  100% {
+    transform: translateX(0);
+  }
+}
+
+</style>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Cairo:400,700=arabic');
+a {
+  text-decoration: none;
+  text-align: right;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .textOverImage {
+    background-size: cover !important;
+  }
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  left: 0%;
+  margin: 2px 0;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.7);
+  border-radius: 4px;
+  overflow: hidden;
+  border: 2px solid #000;
+}
+
+.textOverImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  float: left;
+  background-size: 100%;
+  background-position: center;
+  transition: 0.5s;
+  overflow: hidden;
+  animation: slide 27s infinite;
+  transform: translateX(100%);
+  font-family: Arial, Helvetica, sans-serif;
+  border-right: 2px solid #000;
+}
+
+.textOverImage:hover {
+  background-size: 100%;
+}
+
+.textOverImage:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 60%;
+  right: 0;
+  transform: translateX(100%);
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000;
+  padding: 8px;
+  content: attr(data-title);
+  font-family:'cairo',serif;
+  transition: 0.5s;
+  font-weight: bold;
+  font-size: 1.3em;
+  border-left: 2px solid #000;
+  box-sizing: border-box;
+}
+
+.textOverImage:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 60%;
+  right: 0;
+  color: #000;
+  padding: 8px;
+  content: attr(data-text);
+  transition: 0.5s;
+  padding-top: 2em;
+  margin-top: 20px;
+  transform: translateX(100%);
+  font-family:'cairo',serif;
+}
+
+.textOverImage:hover:after {
+  transform: translateX(0);
+}
+
+.textOverImage:hover:before {
+  transform: translateX(0);
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.7);
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  11.11%,
+  33.33% {
+    /*sStart, sStop*/
+    transform: translateX(0);
+  }
+  44.44%,
+  100% {
+    /*wStart, 100%*/
+    transform: translateX(-100%);
+  }
+}
+
+/*
+            .textOverImage:nth-child(m) {
+                animation-delay: (m - 1)(t + s);
+            }
+        */
+
+.textOverImage:nth-child(1) {
+  /*m = 1*/
+  /*animation-delay: 0s;*/
+  /*(m - 1)(t + s) = 0s*/
+  /*slide T infinite,first-slide t*/
+  animation: slide 27s infinite, first-slide 3s;
+}
+
+@keyframes first-slide {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.textOverImage:nth-child(2) {
+  /*m = 2*/
+  animation-delay: 9s;
+  /*(m - 1)(t + s) = (1)(9s)*/
+}
+
+.textOverImage:nth-child(3) {
+  /*m = 3*/
+  animation-delay: 18s;
+  /*(m - 1)(t + s) = (2)(9s)*/
+}
+
+    </style>
+
+    <style>
+      body {
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(#ffffff, #ffffff);
+	height: 100vh;
+	overflow: hidden;
+}
+
+i {
+	position: absolute;
+	height: 10px;
+	background: linear-gradient(transparent, #fff);
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	animation: raining 5s linear infinite;
+}
+
+@keyframes raining {
+	0% {
+		transform: translateY(-160px);
+	}
+
+	100% {
+		transform: translateY(calc(100vh + 160px));
+	}
+}
+
+    </style>
+    
+    <style>
+      body {
+  overflow: scroll;
+}
+
+    </style>
+
+<style>
+  
+#splash {
+  background: #e2db0b;
+  background-repeat: repeat-y;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  animation: splash 3s ease-in;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%,0);
+}
+
+#loader:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  margin-left: -8px;
+  bottom: -170px;
+  width: 3px;
+  background: #fff;
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+  height: 200px;
+}
+
+#loader:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  margin-left: 8px;
+  bottom: -190px;
+  width: 3px;
+  background: #000;
+  background: linear-gradient(to bottom, rgba(0,0,0,.2) 0%, rgba(0,0,0,.2) 50%, rgba(0,0,0,0) 100%);
+  height: 200px;
+}
+
+#splash .anim {
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  width: 100px;
+  transform: translate(-50%,100%);
+  animation: loader 4s linear;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes loader {
+  0% {
+    transform: translate(-50%,110%);
+  }
+  30% {
+    transform: translate(-50%,50%);
+  }
+  100% {
+    transform: translate(-50%,0%);
+  }
+}
+
+@keyframes splash {
+  0% {
+    transform: translate(0%,0%);
+  }
+  50% {
+    transform: translate(0%,0%);
+  }
+  100% {
+    transform: translate(0%,-100%);
+  }
+}
+
+</style>
+
+<style>
+    body {
+  background: #f4f4f2;
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin: 80px 0;
+}
+
+.mynav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+}
+
+.mynav li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.mynav a {
+  display: block;
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+  padding: 7px 15px;
+}
+
+.target {
+  position: absolute;
+  border-bottom: 4px solid transparent;
+  z-index: -1;
+  transform: translateX(-60px);
+}
+
+.mynav a,
+.target {
+  transition: all .35s ease-in-out;
+}
+</style>
+
+<style>
+  .under {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  width: calc(100% / 6 - 0.2mm);
+  height: 50px;
+  background-color: rgb(223, 210, 210);
+}
+.box {
+  font-family: 'Montserrat', sans-serif;
+  width: calc(100% / 6 - 0.2mm);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: orange;
+}
+.box {
+  cursor: pointer;
+  color: black;
+}
+
+.box:hover {
+  color: orange;
+}
+
+</style>
+
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+* {
+  box-sizing: border-box;
+  font-weight: normal;
+}
+
+.thelat {
+  color: #555;
+  background: #222;
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+  padding: 1em;
+}
+
+h1 {
+  font-size: 2.2em;
+}
+
+.flip {
+  position: relative;
+  display: inline-block;
+  margin-right: 2px;
+  margin-bottom: 1em;
+  width: 400px;
+}
+
+.flip > .front,
+.flip > .back {
+  display: block;
+  color: white;
+  width: inherit;
+  background-size: cover !important;
+  background-position: center !important;
+  height: 220px;
+  padding: 1em 2em;
+  background: #313131;
+  border-radius: 10px;
+}
+
+.flip > .front p {
+  font-size: 0.9125rem;
+  line-height: 160%;
+  color: #999;
+}
+
+.flip:hover > .front {
+  transform: rotateY(180deg);
+}
+
+.flip > .back {
+  position: absolute;
+  opacity: 0;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(-180deg);
+}
+
+.flip:hover > .back {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+
+.flip.flip-vertical > .back {
+  transform: rotateX(-180deg);
+}
+
+.flip.flip-vertical:hover > .front {
+  transform: rotateX(180deg);
+}
+
+.flip.flip-vertical:hover > .back {
+  transform: rotateX(0deg);
+}
+
+.text-shadow {
+text-shadow: 1px 1px rgba(0, 0, 0, 0.04), 2px 2px rgba(0, 0, 0, 0.04), 3px 3px rgba(0, 0, 0, 0.04), 4px 4px rgba(0, 0, 0, 0.04), 0.125rem 0.125rem rgba(0, 0, 0, 0.04), 6px 6px rgba(0, 0, 0, 0.04), 7px 7px rgba(0, 0, 0, 0.04), 8px 8px rgba(0, 0, 0, 0.04), 9px 9px rgba(0, 0, 0, 0.04), 0.3125rem 0.3125rem rgba(0, 0, 0, 0.04), 11px 11px rgba(0, 0, 0, 0.04), 12px 12px rgba(0, 0, 0, 0.04), 13px 13px rgba(0, 0, 0, 0.04), 14px 14px rgba(0, 0, 0, 0.04), 0.625rem 0.625rem rgba(0, 0, 0, 0.04), 16px 16px rgba(0, 0, 0, 0.04), 17px 17px rgba(0, 0, 0, 0.04), 18px 18px rgba(0, 0, 0, 0.04), 19px 19px rgba(0, 0, 0, 0.04), 1.25rem 1.25rem rgba(0, 0, 0, 0.04);
+}
+</style>
+
+<style>
+  .lammau{
+    top: 100px;
+    height: 100px;
+    width: 100%;
+    background-color: #ddd;
+  }
+</style>
+
+    <body>
+      
+      <!-- loading page-->
+          <!-- header-->
+      <div class="page">
+<div class="header">
+  <div class="menu">
+    <nav>
+      <ul class="menu">
+    <li><a href="#">Khoa</a></li>
+      <li><a href="#">Viện</a></li>
+      <li><a href="#">Trung Tâm</a></li>
+      <li><a href="#">Thư Viện</a></li>
+    </ul>
+    </nav>
+  </div>
+  <nav>
+    <ul class="menu">
+      <li><a href="#">Trang chủ</a></li>
+      <li><a href="#">Giới thiệu</a></li>
+      <li><a href="#">Tuyển sinh</a></li>
+      <li><a href="#">Đào tạo</a></li>
+      <li><a href="#">Nghiên cứu</a></li>
+      <li><a href="#">Liên hệ</a></li>
+      <li><img class="quocky" src="https://cdn.duytan.edu.vn/images/icon/vi.png"  alt="VN" />
+      <img class="quocky" src="https://dut.udn.vn/portals/_default/skins/dhbk/img/front/flag-english.png" alt="USA" /></li>
+    
+     
+
+    </ul>
+  </nav>
+  </div>
+<!-- navbar-->
+<div class="thanhnavbar"></div>
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="image"><img src="https://media4.giphy.com/media/WQH7pj43rMzqFuB1xm/200w.webp?cid=ecf05e4712wt13va0tparcyvznsmmlwyozutfhlvp9plc4gx&ep=v1_gifs_search&rid=200w.webp&ct=g" width="130px" height="90px"  alt="Khoa Công nghệ Thông tin" /></div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto ">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Đại Học</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 Cao Đẳng
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      
+                
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <span class="text-uppercase text-white">Category 1</span>
+                      <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#">Active</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link item</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link item</a>
+                      </li>
+                    </ul>
+                    </div>
+                    <!-- /.col-md-4  -->
+                    <div class="col-md-4">
+                      <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#">Active</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link item</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link item</a>
+                      </li>
+                    </ul>
+                    </div>
+                    <!-- /.col-md-4  -->
+                    <div class="col-md-4">
+                      <a target="_blank" href="https://bootstrapcreative.com/resources/a-beginners-guide-to-hubspot-cms/">
+                        <img src="https://i0.wp.com/bootstrapcreative.com/wp-bc/wp-content/uploads/2022/07/beginners-guide-to-hubspot-cms-cover.png?w=200&ssl=1" alt="Web Design Guides" class="img-fluid">
+                      </a>
+                      <p class="text-white">Get Free Guides</p>
+      
+                    </div>
+                    <!-- /.col-md-4  -->
+                  </div>
+                </div>
+                <!--  /.container  -->
+      
+      
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     Chuyên Ngành Đào Tạo
+          </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      
+      
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <span class="text-uppercase text-white">Category 2</span>
+                      <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#">Active</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link item</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link item</a>
+                      </li>
+                    </ul>
+                    </div>
+                    <!-- /.col-md-4  -->
+                    <div class="col-md-4">
+                      <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#">Active</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link item</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link item</a>
+                      </li>
+                    </ul>
+                    </div>
+                    <!-- /.col-md-4  -->
+                    <div class="col-md-4">
+                      <a target="_blank" href="https://bootstrapcreative.com/shop/jake-portfolio-hubspot-theme/">
+                        <img src="https://i0.wp.com/bootstrapcreative.com/wp-bc/wp-content/uploads/2022/01/jake-portfolio-cover.jpg?w=200&ssl=1" alt="Portfolio Website Templates" class="img-fluid">
+                      </a>
+                      <p class="text-white">Create a Portfolio Website Fast</p>
+      
+                    </div>
+                    <!-- /.col-md-4  -->
+                  </div>
+                </div>
+                <!--  /.container  -->
+      
+      
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Thông Tin Tuyển Sinh Năm 2023
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      
+      
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4">
+                     <span class="text-uppercase text-white">Category 3</span>
+                      <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#">Active</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link item</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link item</a>
+                      </li>
+                    </ul>
+                    </div>
+                    <!-- /.col-md-4  -->
+                    <div class="col-md-4">
+                      <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#">Active</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link item</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link item</a>
+                      </li>
+                    </ul>
+                    </div>
+                    <!-- /.col-md-4  -->
+                    <div class="col-md-4">
+      
+                      <a target="_blank" href="https://bootstrapcreative.com/resources/">
+                        <img src="https://i0.wp.com/bootstrapcreative.com/wp-bc/wp-content/uploads/2020/09/Filtered-Paint-Image-Instagram-Square.png?w=200&ssl=1" alt="Web Design Resources" class="img-fluid">
+                      </a>
+                      <p class="text-white">Free Web Design Resources</p>
+                      
+                    </div>
+                    <!-- /.col-md-4  -->
+                  </div>
+                </div>
+                <!--  /.container  -->
+      
+      
+              </div>
+            </li>
+      
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+          </form>
+          
+        </div>
+
+        <!-- background-->
+
+      </nav>
+      <!-- phần thân-->
+     
+      <div class="carousel">
+        <a href="#" class="textOverImage" style="background-image:url(https://wallpaperaccess.com/full/306409.jpg)" data-title="Đặng Nhật Đẹp Trai" data-text="ok">
+              </a>
+      
+        <a href="#" class="textOverImage" style="background-image:url(https://wallpaperaccess.com/full/346725.jpg)" data-title="Top 1" data-text="Thế giới">
+              </a>
+      
+        <a href="#" class="textOverImage" style="background-image:url(https://4kwallpapers.com/images/wallpapers/dubai-city-united-arab-emirates-city-skyline-cityscape-3440x1440-2841.jpg)" data-title="HEHEHEHEHEHE" data-text="UKI">
+              </a>
+      </div>
+   
+      <p>
+    </div>
+   
+    <div class="texteffect">
+      <div class="text"></div>
+    </div>
+
+    <div id="splash">
+        <div class="anim">
+          <div id="loader">
+            <svg version="1.1" width="60px" height="70px" viewBox="0 0 60 70">
+              <defs>
+                <filter id="f1" x="0" y="0">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+                </filter>
+              </defs>
+              <g id="airplane">
+                <path fill="#000" d="M0.677,20.977l4.355,1.631c0.281,0.104,0.579,0.162,0.88,0.16l9.76-0.004L30.46,41.58c0.27,0.34,0.679,0.545,1.112,0.541
+                h1.87c0.992,0,1.676-0.992,1.322-1.918l-6.643-17.439l6.914,0.002l6.038,6.037c0.265,0.266,0.624,0.412,0.999,0.418l1.013-0.004
+                c1.004-0.002,1.684-1.012,1.312-1.938l-2.911-7.277l2.912-7.278c0.372-0.928-0.313-1.941-1.313-1.938h1.017
+                c-0.375,0-0.732,0.15-0.996,0.414l-6.039,6.039h-6.915l6.646-17.443c0.354-0.926-0.33-1.916-1.321-1.914l-1.87-0.004
+                c-0.439,0.004-0.843,0.203-1.112,0.543L15.677,17.24l-9.765-0.002c-0.3,0.002-0.597,0.055-0.879,0.16L0.678,19.03
+                C-0.225,19.36-0.228,20.637,0.677,20.977z" transform="translate(44,0) rotate(90 0 0)" />
+              </g>
+              <g id="shadow" transform="scale(.9)">
+                <path fill="#000" fill-opacity="0.3" d="M0.677,20.977l4.355,1.631c0.281,0.104,0.579,0.162,0.88,0.16l9.76-0.004L30.46,41.58c0.27,0.34,0.679,0.545,1.112,0.541
+                    h1.87c0.992,0,1.676-0.992,1.322-1.918l-6.643-17.439l6.914,0.002l6.038,6.037c0.265,0.266,0.624,0.412,0.999,0.418l1.013-0.004
+                    c1.004-0.002,1.684-1.012,1.312-1.938l-2.911-7.277l2.912-7.278c0.372-0.928-0.313-1.941-1.313-1.938h1.017
+                    c-0.375,0-0.732,0.15-0.996,0.414l-6.039,6.039h-6.915l6.646-17.443c0.354-0.926-0.33-1.916-1.321-1.914l-1.87-0.004
+                    c-0.439,0.004-0.843,0.203-1.112,0.543L15.677,17.24l-9.765-0.002c-0.3,0.002-0.597,0.055-0.879,0.16L0.678,19.03
+                    C-0.225,19.36-0.228,20.637,0.677,20.977z" transform="translate(64,30) rotate(90 0 0)" filter="url(#f1)" />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+      
+      
+      <!-- client-->
+
+
+<br>
+<center>
+  <div>
+  <h2 style="display: inline-block; position: relative;">Đơn Vị Hợp Tác
+   
+  </h2>
+</div><br>
+</center>
+      <div class="client">
+        <div class="clients">
+          <img class="clientxs" src="https://upload.wikimedia.org/wikipedia/vi/thumb/f/f4/Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%A0_N%E1%BA%B5ng.svg/800px-Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%A0_N%E1%BA%B5ng.svg.png" alt="DHĐN" />
+          <img class="clientxs"  src="https://dut.udn.vn/Files/admin/images/Tin_tuc/Khac/2020/LogoDUT/image002.jpg" alt="Đại Học Bách Khoa" />
+          <img class="clientxs" src="https://upload.wikimedia.org/wikipedia/vi/thumb/5/5a/Logo_tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_th%C3%B4ng_tin_v%C3%A0_Truy%E1%BB%81n_th%C3%B4ng_Vi%E1%BB%87t_-_H%C3%A0n%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%A0_N%E1%BA%B5ng.svg/242px-Logo_tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_th%C3%B4ng_tin_v%C3%A0_Truy%E1%BB%81n_th%C3%B4ng_Vi%E1%BB%87t_-_H%C3%A0n%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%A0_N%E1%BA%B5ng.svg.png" alt="Đại Học CNTT và Truyền Thông Việt Hàn" />
+          <img class="clientxs" src="https://cdn.duytan.edu.vn/upload/images/25-10-2017-15-17-40-30.jpg" alt="Trường Đại Học Duy Tân" />
+          <img class="clientxs" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRpZ1N11LqhrVF12eJIZshJCXDxnp2G_1xfA&usqp=CAU" alt="Trường Đại Học Thể Dục Thể Thao" />
+          <img class="clientxs" src="https://upload.wikimedia.org/wikipedia/commons/2/25/Logo_Kinh_t%E1%BA%BF_%C4%90%C3%A0_N%E1%BA%B5ng.jpg" alt="Đại Học Kinh Tế Đà Nẵng" />
+          <img class="clientxs" src="https://haitrieu.com/wp-content/uploads/2022/01/Logo-Truo%CC%80ng-Dai-hoc-Ky-thuat-Y-%E2%80%93-Duoc-Da-Nang-1.png" alt="Đại Học Kỹ Thuật Y Dược Đà Nẵng" />
+          <img class="clientxs"   src="https://upload.wikimedia.org/wikipedia/commons/4/42/Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_K%E1%BB%B9_thu%E1%BA%ADt_%C4%90%C3%A0_N%E1%BA%B5ng.png" alt="Đại Học SPKT Đà Nẵng" />
+          <img class="clientxs" src="https://ued.udn.vn/uploads/photos/images/2021/04/logo-nha-truong/logo-2021.jpg" alt="Đại Học Sư Phạm" />
+          <img class="clientxs"   src="https://downloadlogomienphi.com/sites/default/files/logos/download-logo-vector-dai-hoc-fpt-mien-phi.jpg" alt="Đại Học FPT" />
+          <img class="clientxs" src="https://upload.wikimedia.org/wikipedia/vi/thumb/3/3a/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ngo%E1%BA%A1i_ng%E1%BB%AF%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%A0_N%E1%BA%B5ng.svg/1200px-Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Ngo%E1%BA%A1i_ng%E1%BB%AF%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_%C4%90%C3%A0_N%E1%BA%B5ng.svg.png" alt="Đại Học NN" />
+        </div>
+      </div>
+
+         <!-- header dưới-->
+         <center>
+          <div>
+          <h2 style="display: inline-block; position: relative;">Thông Tin Tuyển Sinh
+            <span style="display: inline-block; position: absolute; bottom: -0.3cm; left: 120px; width: 2cm; border-bottom: 2px solid black;"></span>
+            <span style="display: inline-block; position: absolute; bottom: -0.6cm; left: 80px; width: 4cm; border-bottom: 4px solid black;"></span>
+          </h2>
+        </div><br>
+        </center>
+        
+         <div class="under">
+          
+          <div class="box">Nhật</div>
+          <div class="box">Nhật</div>
+          <div class="box">Nhật</div>
+          <div class="box">Nhật</div>
+          <div class="box">Nhật</div>
+          <div class="box">Nhật</div>
+        </div>
+        
+    <!-- horizontal -->
+<div class="thelat">
+<h4>Đại Học</h4>
+<div class="flip">
+    <div class="front" style="background-image: url(https://images.pexels.com/photos/540518/pexels-photo-540518.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
+       <h1 class="text-shadow">MOUNTAIN</hi>
+    </div>
+    <div class="back">
+       <h2>Angular</h2>
+       <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+    </div>
+</div>
+<div class="flip">
+    <div class="front" style="background-image: url(https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
+       <h1 class="text-shadow">LAKE</hi>
+    </div>
+    <div class="back">
+       <h2>Angular</h2>
+       <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+    </div>
+</div>
+<div class="flip">
+    <div class="front" style="background-image: url(https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
+       <h1 class="text-shadow">OCEAN</hi>
+    </div>
+    <div class="back">
+       <h2>Angular</h2>
+       <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+    </div>
+</div>
+
+<br>
+<br>
+
+<!-- vertical -->
+  
+<h4>Cao Đẳng</h4>
+<div class="flip flip-vertical">
+    <div class="front" style="background-image: url(https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
+       <h1 class="text-shadow">FOREST</hi>
+    </div>
+    <div class="back">
+       <h2>Angular</h2>
+       <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+    </div>
+</div>
+<div class="flip flip-vertical">
+    <div class="front" style="background-image: url(https://images.pexels.com/photos/34950/pexels-photo.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
+       <h1 class="text-shadow">TRACK</hi>
+    </div>
+    <div class="back">
+       <h2>Angular</h2>
+       <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+    </div>
+</div>
+<div class="flip flip-vertical">
+    <div class="front" style="background-image: url(https://images.pexels.com/photos/34546/sunset-lake-landscape-summer.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
+       <h1 class="text-shadow">SWAMP</hi>
+    </div>
+    <div class="back">
+       <h2>Angular</h2>
+       <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+    </div>
+</div>
+</div>
+
+
+<!-- thành tựu-->
+
+    </body>
+
+    
+    <script>
+      //background
+      function meteor() {
+	let amount = 150;
+	let body = document.querySelector("body");
+	let count = 0;
+
+	while (count < amount) {
+		let drop = document.createElement("i");
+
+		let size = Math.random() * 5;
+		let posX = Math.floor(Math.random() * window.innerWidth);
+		let delay = Math.random() * -20;
+		let duration = Math.random() * 5;
+
+		drop.style.width = `${0.1 + size}px`;
+		drop.style.left = `${posX}px`;
+		drop.style.animationDelay = `${delay}s`;
+		drop.style.animationDuration = `${1 + duration}s`;
+
+		body.appendChild(drop);
+		count++;
+	}
+}
+
+meteor();
+
+      //hết
+      $(document).ready(function() {
+     // executes when HTML-Document is loaded and DOM is ready
+    
+    // breakpoint and up  
+    $(window).resize(function(){
+      if ($(window).width() >= 980){	
+    
+          // when you hover a toggle show its dropdown menu
+          $(".navbar .dropdown-toggle").hover(function () {
+             $(this).parent().toggleClass("show");
+             $(this).parent().find(".dropdown-menu").toggleClass("show"); 
+           });
+    
+            // hide the menu when the mouse leaves the dropdown
+          $( ".navbar .dropdown-menu" ).mouseleave(function() {
+            $(this).removeClass("show");  
+          });
+      
+        // do something here
+      }	
+    });  
+      
+      
+    
+    // document ready  
+    });
+    </script>
+<!-- texteffect-->
+    <script>
+   // ——————————————————————————————————————————————————
+// TextScramble
+// ——————————————————————————————————————————————————
+
+class TextScramble {
+  constructor(el) {
+    this.el = el
+    this.chars = '!<>-_\\/[]{}—=+*^?#________'
+    this.update = this.update.bind(this)
+  }
+  setText(newText) {
+    const oldText = this.el.innerText
+    const length = Math.max(oldText.length, newText.length)
+    const promise = new Promise((resolve) => this.resolve = resolve)
+    this.queue = []
+    for (let i = 0; i < length; i++) {
+      const from = oldText[i] || ''
+      const to = newText[i] || ''
+      const start = Math.floor(Math.random() * 40)
+      const end = start + Math.floor(Math.random() * 40)
+      this.queue.push({ from, to, start, end })
+    }
+    cancelAnimationFrame(this.frameRequest)
+    this.frame = 0
+    this.update()
+    return promise
+  }
+  update() {
+    let output = ''
+    let complete = 0
+    for (let i = 0, n = this.queue.length; i < n; i++) {
+      let { from, to, start, end, char } = this.queue[i]
+      if (this.frame >= end) {
+        complete++
+        output += to
+      } else if (this.frame >= start) {
+        if (!char || Math.random() < 0.28) {
+          char = this.randomChar()
+          this.queue[i].char = char
+        }
+        output += `<span class="dud">${char}</span>`
+      } else {
+        output += from
+      }
+    }
+    this.el.innerHTML = output
+    if (complete === this.queue.length) {
+      this.resolve()
+    } else {
+      this.frameRequest = requestAnimationFrame(this.update)
+      this.frame++
+    }
+  }
+  randomChar() {
+    return this.chars[Math.floor(Math.random() * this.chars.length)]
+  }
+}
+
+// ——————————————————————————————————————————————————
+// Example
+// ——————————————————————————————————————————————————
+
+const phrases = [
+  '^_^',
+  'Xin Chào,',
+  'Đã Đến Với WebSite',
+  'Tại Đây!',
+  'Bạn Có Thể Nhận Được Gợi Ý,Tìm Kiếm Và Lựa Chọn',
+  'Các Ngành Học Và Trường Đại Học',
+  'Phù Hợp Với Bạn',
+  'Chúc Bạn Sớm Tìm Được Nha!'
+]
+
+const el = document.querySelector('.text')
+const fx = new TextScramble(el)
+
+let counter = 0
+const next = () => {
+  fx.setText(phrases[counter]).then(() => {
+    setTimeout(next, 800)
+  })
+  counter = (counter + 1) % phrases.length
+}
+
+next()
+    </script>
+    </html>
